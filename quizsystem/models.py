@@ -11,8 +11,6 @@ class Teacher(models.Model):
         return self.full_name
 
 
-
-
 class Student(models.Model):
     full_name = models.CharField(max_length=100, blank=False, null=False)
     email = models.CharField(max_length=200, blank=False, null=False)
