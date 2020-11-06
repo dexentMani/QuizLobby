@@ -1,0 +1,86 @@
+{% extends 'quizsystem/base.html' %}
+{% block body %}
+
+                        <h1 class="">Application Form! </h1>
+                        <p class="signup-link">Already have an account? <a href="{% url 'login' %}">Log in</a></p>
+                        <form class="md-form" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                             {% if messages %}
+                                    {% for message in messages %}
+                                    <div class="alert {{ message.tags }} m-2" id="msg" role="alert">
+                                        {{ message }}
+                                          </div>
+                                        {% endfor %}
+                                        {% endif %}
+                            <div class="form">
+
+
+
+                                <div id="name-field" class="field-wrapper input">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                    {{form.full_name}}
+
+                                </div>
+
+                                <div id="contact-field" class="field-wrapper input">
+                                   <svg width="24" height="24" viewBox="0 0 16 16" class="bi bi-telephone-fill" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                   <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
+                                     </svg>
+                                    {{form.contact_no}}
+
+                                </div>
+
+
+                                <div id="email-field" class="field-wrapper input">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-at-sign"><circle cx="12" cy="12" r="4"></circle><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path></svg>
+                                    {{form.email}}
+
+                                </div>
+                                <div id="name-field2" class="field-wrapper input mb-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+
+
+                                   {{form.position}}
+
+                                </div>
+
+
+                                   <h5>Upload your Cv here!</h5>
+
+
+                                <div class="field-wrapper input mb-2">
+                                     <svg width="24" height="24" viewBox="0 0 16 16" class="bi bi-file-earmark-fill" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">-->
+                                        <path fill-rule="evenodd" d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0H4zm5.5 1.5v2a1 1 0 0 0 1 1h2l-3-3z"/>
+                                         </svg>
+                                         {{form.cv}}
+                                </div>
+
+                                   {{form.message}}
+
+
+                                <div class="field-wrapper terms_condition">
+                                    <div class="n-chk new-checkbox checkbox-outline-primary">
+                                        <label class="new-control new-checkbox checkbox-outline-primary">
+                                          <input type="checkbox" class="new-control-input">
+                                          <span class="new-control-indicator"></span><span>I agree to the <a href="javascript:void(0);">  terms and conditions </a></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="d-sm-flex justify-content-between">
+
+                                    <div class="field-wrapper">
+
+                                        <button type="submit" class="btn btn-primary" > Get Started! </button>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+<p class="terms-conditions">© 2020 All Rights Reserved by QuizLobby</p>
+
+
+{% endblock %}
+
+    

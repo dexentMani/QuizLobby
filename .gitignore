@@ -1,0 +1,10 @@
+/db.sqlite3
+/db.sqlite03
+/db.sqlite13
+/quizsystem/migrations/0001_initial.py
+/quizsystem/migrations/0002_auto_20201019_1728.py
+/quizsystem/migrations/0003_auto_20201019_1835.py
+/quizsystem/migrations/0004_auto_20201019_1844.py
+/quizsystem/migrations/0005_quiz_quiz_title.py
+/quizsystem/migrations/0006_course_course_code.py
+/quizsystem/migrations/__init__.py
